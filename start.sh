@@ -1,4 +1,4 @@
-#docker build -t .
+docker build -t qgis .
 xhost +
-docker run --rm --name="qgis-desktop" -i -t -v `pwd`/tmp:/home -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY docker-qgis /usr/bin/qgis
+docker run --rm --name="qgis-desktop" -it -v $HOME/tmp:/root -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY qgis /usr/bin/qgis
 xhost -
