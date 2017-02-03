@@ -7,5 +7,6 @@ RUN echo "deb-src http://qgis.org/debian-nightly xenial main" >> /etc/apt/source
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key 073D307A618E5811
 RUN apt-get -y update && apt-get -y dist-upgrade && apt-get -y install qgis python-qgis qgis-plugin-grass
 RUN apt-get -y install libqt5webkit5-dev python3-pyqt5.qtsvg python3-pyqt5.qtwebkit python-qscintilla2
-RUN apt-get -y clean
+RUN apt-get -y update
+
 
